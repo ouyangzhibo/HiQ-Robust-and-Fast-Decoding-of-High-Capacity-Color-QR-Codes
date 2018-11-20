@@ -1,0 +1,1 @@
+# HiQ-Robust-and-Fast-Decoding-of-High-Capacity-Color-QR-Codes
