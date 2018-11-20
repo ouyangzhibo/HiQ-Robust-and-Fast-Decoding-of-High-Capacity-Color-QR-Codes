@@ -1,5 +1,5 @@
 # HiQ: High Capacity Color QR Codes
-Implementation of HiQ codes, including source code for a desktop HiQ codes generator and HiQ codes decoder for Android platform written in Java. This repository also includes two algorithms for solving the cross-module color interference written in Matlab. 
+Implementation of HiQ codes, including source code for a desktop HiQ codes generator and the core of HiQ codes decoder for Android platform written in Java. This repository also includes two algorithms for solving the cross-module color interference written in Matlab. 
 
 This work is developed upon [ZXing](https://github.com/zxing/zxing).
 
