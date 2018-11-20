@@ -33,7 +33,7 @@ Prerequisites
 
 Code Contributors
 ---
-Chak Man Li
-Zhibo Yang
+- Chak Man Li
+- Zhibo Yang
 
 **More details will be coming up...** 
