@@ -31,4 +31,9 @@ Prerequisites
 - libsvm (for matlab code)
 - ZXing (for desktop HiQ codes creator and decoder)
 
-**More details will be coming...** 
+Code Contributors
+---
+Chak Man Li
+Zhibo Yang
+
+**More details will be coming up...** 
