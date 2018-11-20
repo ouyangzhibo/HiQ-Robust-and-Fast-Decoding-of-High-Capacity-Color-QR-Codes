@@ -36,4 +36,10 @@ Code Contributors
 - Chak Man Li
 - Zhibo Yang
 
+Color QR code Dataset: CUHK-CQRC
+---
+A dataset containing more than 5k color QR codes images captured by a variety of smartphones under different lighting conditions.
+
+http://authpaper.net/colorDatabase/index.html
+
 **More details will be coming up...** 
