@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="755.0" prefWidth="1008.0" styleClass="null" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="desktopCreator.FrontPageController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane disable="false" dividerPositions="0.0796812749003984" focusTraversable="true" layoutX="0.0" layoutY="0.0" orientation="VERTICAL" prefHeight="755.0" prefWidth="1010.0" visible="true">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="59.0" prefWidth="712.0">
+          <children>
+            <Label layoutX="-1.0" layoutY="-1.0" minHeight="14.0" prefHeight="57.0" prefWidth="438.0" style="-fx-text-fill: #ff3366;&#10;-fx-font-size: 24px;&#10;-fx-font-weight: bold;&#10;" text="Authenticated Papers Creator" wrapText="true">
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </Label>
+            <Label contentDisplay="LEFT" layoutX="827.0" layoutY="1.0" prefHeight="28.0" prefWidth="167.0" style="-fx-alignment: center" text="Welcome:" textAlignment="RIGHT" wrapText="true">
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </Label>
+            <Label fx:id="usernameText" alignment="CENTER" contentDisplay="CENTER" layoutX="827.0" layoutY="28.0" prefHeight="28.000099999997474" prefWidth="167.0" style="-fx-alignment: center" text="User" textAlignment="CENTER" wrapText="true">
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="772.0">
+          <children>
+            <Label layoutX="14.0" layoutY="32.0" prefHeight="34.0" prefWidth="358.0" style="" text="Step 1: Select a document template" />
+            <WebView fx:id="templateWebView" layoutX="463.0" layoutY="0.0" prefHeight="344.0" prefWidth="545.0" scaleX="1.0" scaleY="1.0" />
+            <Label layoutX="14.0" layoutY="78.0" prefHeight="33.000091552734375" prefWidth="267.0" style="" text="Step 2: Input data">
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </Label>
+            <GridPane fx:id="inputGrid" gridLinesVisible="true" layoutX="24.0" layoutY="112.0" prefHeight="344.0" prefWidth="428.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="218.0" minWidth="10.0" prefWidth="175.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="253.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </GridPane>
+            <Label layoutX="14.0" layoutY="458.0" prefHeight="34.0" prefWidth="466.0" style="" text="Step 3: Select files for creating digital signature" />
+            <TextField fx:id="privatekeySelectorText" editable="false" layoutX="14.0" layoutY="492.0" prefWidth="357.9998779296875" promptText="Select the private key for signature creations" />
+            <Button fx:id="privatekeySelector" layoutX="382.0" layoutY="491.0" mnemonicParsing="false" onAction="#selectCert" style="" text="Select key" wrapText="true" />
+            <TextField fx:id="certSelectorText" editable="false" layoutX="15.0" layoutY="527.0" prefWidth="358.0" promptText="Select the corresponding digital certificate" />
+            <Button fx:id="certSelector" layoutX="381.0" layoutY="527.0" mnemonicParsing="false" onAction="#selectCert" text="Select cert" wrapText="true" />
+            <Button fx:id="create2Dbarcode" layoutX="15.0" layoutY="650.0" mnemonicParsing="false" onAction="#create2DBarcode" text="Create Authenticated 2D barcode">
+              <font>
+                <Font size="18.0" />
+              </font>
+            </Button>
+            <ImageView fx:id="image2Dbarcode" fitHeight="173.0" fitWidth="168.0" layoutX="480.0" layoutY="345.0" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="@img/authCode.png" />
+              </image>
+            </ImageView>
+            <Button id="saveImage2Dbarcode" fx:id="save2DbarcodeImage" layoutX="472.0" layoutY="517.0" mnemonicParsing="false" onAction="#saveCreated2DbarcodeImage" text="Save above barcode">
+              <font>
+                <Font size="16.0" fx:id="x1" />
+              </font>
+            </Button>
+            <MenuButton fx:id="docTemplateMenu" layoutX="254.0" layoutY="66.0" mnemonicParsing="false" style="" text="Available Templates" textOverrun="ELLIPSIS" underline="false" wrapText="false">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Loading the templates" />
+              </items>
+            </MenuButton>
+            <TextField fx:id="issuerNameText" editable="false" layoutX="14.0" layoutY="580.0" prefHeight="23.0" prefWidth="230.00009999999747" promptText="Issuer name of the document" />
+            <Label layoutX="13.0" layoutY="550.0" minHeight="21.9998779296875" prefHeight="28.0" prefWidth="232.0" style="" text="Name of issuer (signer)" textAlignment="CENTER" wrapText="false" />
+            <CheckBox fx:id="isCertIncludingClickbox" allowIndeterminate="false" layoutX="14.0" layoutY="609.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="230.0" text="Include the digital certificate into the &#10;QR code (May surplus the data limit.)" textOverrun="ELLIPSIS" underline="false" wrapText="false" />
+            <Button fx:id="saveDocument" font="$x1" layoutX="632.0" layoutY="566.0" mnemonicParsing="false" onAction="#saveCreatedDocument" text="Print the created document" />
+            <TextField id="issuerNameText" fx:id="signatureAlgorithmText" editable="false" layoutX="254.0" layoutY="580.0" prefHeight="23.0" prefWidth="218.0" promptText="Digital signature algorithm to use" />
+            <Label layoutX="254.0" layoutY="549.0" minHeight="21.9998779296875" prefHeight="31.0" prefWidth="218.0" style="&#10;" text="Signature algorithm" textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false" />
+            <Label layoutX="14.0" layoutY="11.0" style="" text="Writer name (optional)">
+              <stylesheets>
+                <URL value="@application.css" />
+              </stylesheets>
+            </Label>
+            <TextField fx:id="senderName" layoutX="223.0" layoutY="14.0" prefWidth="226.0" promptText="Name of writer" />
+            <CheckBox id="isCertIncludingClickbox" fx:id="isForceCompressionClickBox" allowIndeterminate="false" layoutX="236.0" layoutY="609.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="277.0" text="Compress the data even if it contains &#10;plain text only (Only our scanner can read it)" textOverrun="ELLIPSIS" underline="false" wrapText="false" />
+            <ImageView fx:id="image2Dbarcode2" fitHeight="173.0" fitWidth="168.0" layoutX="659.0" layoutY="345.0" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="@img/authCode.png" />
+              </image>
+            </ImageView>
+            <ImageView fx:id="image2Dbarcode3" fitHeight="173.0" fitWidth="168.0" layoutX="840.0" layoutY="344.0" pickOnBounds="true" preserveRatio="false">
+              <image>
+                <Image url="@img/authCode.png" />
+              </image>
+            </ImageView>
+            <Button id="saveImage2Dbarcode2" fx:id="save2DbarcodeImage2" font="$x1" layoutX="657.0" layoutY="518.0" mnemonicParsing="false" onAction="#saveCreated2DbarcodeImage" text="Save above barcode" />
+            <Button id="saveImage2Dbarcode3" fx:id="save2DbarcodeImage3" font="$x1" layoutX="835.0" layoutY="518.0" mnemonicParsing="false" onAction="#saveCreated2DbarcodeImage" text="Save above barcode" />
+            <CheckBox id="isCertIncludingClickbox" fx:id="isDividingClickbox" allowIndeterminate="false" layoutX="602.0" layoutY="603.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="267.0" text="Divide data into three 2D barcode. (For text, &#10;the divided codes are independant. For signed &#10;codes, you need to scan them all to get data)" textOverrun="ELLIPSIS" underline="false" wrapText="false" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@application.css" />
+  </stylesheets>
+</AnchorPane>

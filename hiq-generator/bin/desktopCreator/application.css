@@ -1,0 +1,24 @@
+.split-pane {
+	/*-fx-background-image: url("WaterFallInRomania.jpg");*/
+	/*-fx-background-image: url("background.jpg");*/
+	-fx-background-color: #FFFFFF;
+}
+.label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    /*-fx-text-fill: #51ae51;*/
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.button {
+	-fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);    
+}
+.button:hover, .inputButton:hover {
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+#privatekeySelector, #certSelector, #docTemplateMenu, #docTemplateMenu .label, .inputLabel, .inputButton{
+	-fx-font-size: 14px;
+}
