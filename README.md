@@ -42,4 +42,8 @@ A dataset containing more than 5k color QR codes images captured by a variety of
 
 http://authpaper.net/colorDatabase/index.html
 
-**More details will be coming up...** 
+Example HiQ Codes
+---
+<img src="hiq-examples/2919bytes-L-v22.png" width="200"> <img src="hiq-examples/4498bytes-L-v22.png" width="200"> <img src="hiq-examples/6105bytes-L-v22.png" width="200"> <img src="hiq-examples/7704bytes-L-v22.png" width="200"> 
+
+**More details to come...** 
