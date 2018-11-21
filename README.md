@@ -44,6 +44,6 @@ http://authpaper.net/colorDatabase/index.html
 
 Example HiQ Codes
 ---
-<img src="hiq-examples/2919bytes-L-v22.png" width="200"> <img src="hiq-examples/4498bytes-L-v22.png" width="200"> <img src="hiq-examples/6105bytes-L-v22.png" width="200"> <img src="hiq-examples/7704bytes-L-v22.png" width="200"> 
+<img src="hiq-examples/2919bytes-L-v22.png" width="200"> <img src="hiq-examples/4498bytes-L-v27.png" width="200"> <img src="hiq-examples/6105bytes-L-v33.png" width="200"> <img src="hiq-examples/7704bytes-L-v38.png" width="200"> 
 
 **More details to come...** 
