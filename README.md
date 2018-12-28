@@ -35,7 +35,6 @@ If you are using this work, please cite the following papers:
   year={2015},
   organization={IEEE}
 }
-Chak Man Li*, Pili Hu*, Wing Cheong Lau, “Demo: AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes,” in the Procs. of ACM MobiSys, June 2014.
 @inproceedings{Li2014MobiSys,
   title={Demo: AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes},
   author={Li, Chak Man and Hu, Pili and Lau, Wing Cheong},
