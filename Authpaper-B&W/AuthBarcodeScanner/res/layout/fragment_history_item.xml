@@ -1,0 +1,52 @@
+<!-- Copyright (C) 2014 Solon Li -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" 
+    android:background="?android:attr/activatedBackgroundIndicator">
+    <!--     android:background="@color/result_view" -->
+
+
+    <TextView
+        android:id="@+id/history_firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:text="dummy"
+        android:textColor="@color/result_text"
+        android:textSize="28sp" />
+    
+     <LinearLayout
+         android:id="@+id/history_secondLineLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/history_firstLine"
+         android:orientation="horizontal" >
+
+         <TextView
+             android:id="@+id/history_secondLine"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="5"
+             android:layout_gravity="left"
+             android:singleLine="true"
+             android:text="dummy2"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />
+         
+         <TextView
+             android:id="@+id/history_date"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="3"
+             android:layout_gravity="right" 
+             android:singleLine="true"
+             android:text="dummy date"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />
+
+     </LinearLayout>
+    
+</RelativeLayout> 

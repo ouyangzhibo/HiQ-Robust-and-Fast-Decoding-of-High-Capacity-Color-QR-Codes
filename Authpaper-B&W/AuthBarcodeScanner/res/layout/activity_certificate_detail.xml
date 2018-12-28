@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <ExpandableListView
+        android:id="@+id/expLV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ExpandableListView>
+    
+     <LinearLayout
+         android:id="@+id/cert_date_exp_row"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/expLV"
+         android:orientation="horizontal"
+         android:layout_marginTop="5dp">
+
+         <TextView
+             android:id="@+id/cert_label_date_exp"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="5"
+             android:layout_gravity="left"
+             android:singleLine="true"
+             android:text="@string/cert_label_date_expire"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />     
+         <TextView
+             android:id="@+id/cert_date_expire"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="3"
+             android:layout_gravity="right" 
+             android:singleLine="true"
+             android:text="@string/cert_date_default"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />
+     </LinearLayout>
+     <LinearLayout
+         android:id="@+id/cert_date_iss_row"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/cert_date_exp_row"
+         android:orientation="horizontal"
+         android:layout_marginTop="5dp" >
+         <TextView
+             android:id="@+id/cert_label_date_iss"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="5"
+             android:layout_gravity="left"
+             android:singleLine="true"
+             android:text="@string/cert_label_date_issued"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />
+         
+         <TextView
+             android:id="@+id/cert_date_issued"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="3"
+             android:layout_gravity="right" 
+             android:singleLine="true"
+             android:text="@string/cert_date_default"
+             android:textColor="@color/result_text"
+             android:textSize="18sp" />
+     </LinearLayout>
+     <TextView
+        android:id="@+id/lb_pubkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cert_date_iss_row"
+        android:text="@string/lb_pubkey"
+        android:textColor="@color/result_text"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/pubkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lb_pubkey"
+        android:text="@string/cert_no_title"
+        android:textColor="@color/result_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />    
+    
+</RelativeLayout>

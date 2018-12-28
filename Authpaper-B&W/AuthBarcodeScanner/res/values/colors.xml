@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2014 Solon Li 
+ -->
+<resources>
+  <color name="overlay_mask">#60000000</color>
+  <color name="overlay_points">#c0ffff00</color>
+  <color name="overlay_lines">#c000ff00</color>
+  <color name="overlay_frame">#60000000</color>
+  <color name="view_buttonBackground">#00000000</color> 
+  <color name="result_view">#ffffffff</color>
+  <color name="result_text">#ff000000</color> 
+  <color name="result_issuerText_notVerified">#ffff0000</color>
+  <color name="result_issuerText_background">#c0ffffff</color>
+  <color name="result_issuerText_verified">#ff0000ff</color>
+  <color name="red">#ffff0000</color>
+  <color name="white">#fff</color>
+  <color name="android_blue">#33b5e5</color>
+  <color name="text_grey">#888888</color>
+  
+  <color name="primary">#311B92</color>
+  <color name="primary_light">#EDE7F6</color>
+  <color name="primary_dark">#311B92</color>
+  <color name="primary_accent">#64B5F6</color>
+  
+</resources>

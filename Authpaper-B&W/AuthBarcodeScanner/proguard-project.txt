@@ -1,0 +1,151 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\commons-math3-3.2.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\jsoup-1.7.3.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\mongo8thOct.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\markdown4j-2.2.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\scprov-jdk15on-1.47.0.1.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\core\core.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\platforms\android-23\android.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\google\google_play_services\libproject\google-play-services_lib\bin\google-play-services_lib.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\android\support\v7\appcompat\bin\android-support-v7-appcompat.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\android\support\v7\mediarouter\bin\android-support-v7-mediarouter.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\platforms\android-23\optional\org.apache.http.legacy.jar'
+
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-repackageclasses 'authscanner'
+-allowaccessmodification
+
+# Add any project specific keep options here:
+-dontwarn java.awt.**
+-dontwarn com.mongodb.**
+-dontwarn org.spongycastle.x509.util.**
+-dontwarn org.spongycastle.jce.provider.X509LDAPCertStoreSpi
+-dontwarn java.lang.management.**
+-dontwarn android.content.pm.PackageInstaller
+-dontwarn android.content.pm.PackageInstaller$SessionInfo
+-dontwarn android.content.pm.PackageManager
+-dontwarn android.webkit.WebSettings
+-dontwarn android.security.**
+-dontwarn android.os.PowerManager
+-dontwarn android.support.v7.graphics.**
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.support.v4.app.Fragment
+-keep public class * extends android.support.v7.app.ActionBarActivity
+-keep public class * extends android.app.IntentService
+-keep public class * extends android.support.v4.app.FragmentActivity
+-keep public class * extends android.app.Service
+-keep public class * extends android.app.IntentService
+-keep public class android.content.pm.PackageInstaller
+-keep public class android.content.pm.PackageInstaller$SessionInfo
+-keep public class android.content.pm.PackageManager
+-keep public class android.webkit.WebSettings
+-keep class * implements java.sql.Driver
+
+
+-keepattributes Signature,RuntimeVisibleAnnotations,AnnotationDefault
+
+-keepclassmembers class * {
+@com.google.api.client.util.Key <fields>;
+}
+
+-dontwarn android.support.v4.**     
+-keep class android.support.v4.** { *; }   
+-keep interface android.support.v4.app.** { *; }   
+-keep public class * extends android.support.v4.**   
+-dontwarn android.app.** 
+-keep class android.app.** { *; } 
+-dontwarn android.media.session.**
+-keep class android.media.session.** { *; }
+-dontwarn android.graphics.**
+-keep class android.graphics.**
+-dontwarn android.widget.FrameLayout
+-keep class android.widget.FrameLayout
+-dontwarn android.widget.CompoundButton
+-keep class android.widget.CompoundButton
+-dontwarn android.content.res.**
+-keep class android.content.res.**
+-dontwarn android.os.Message
+-keep class android.os.Message { *; }
+-dontwarn org.apache.commons.codec.binary.Base64
+-keep class org.apache.commons.codec.binary.Base64 { *; }
+-dontwarn org.apache.commons.codec.binary.Hex
+-keep class org.apache.commons.codec.binary.Hex { *; }
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+-keep class android.net.http.SslCertificate { *; }
+-dontwarn android.net.http.SslCertificate
+-keep class android.net.http.SslError { *; }
+-dontwarn android.net.http.SslError
+
+-renamesourcefileattribute SourceFile
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,
+                SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+
+-keep public class org.spongycastle.** {
+  <fields>;
+  <methods>;
+}
+-keeppackagenames org.jsoup.nodes
+ 
+-keepclasseswithmembers class **.R$* {
+    public static <fields>;
+}
+
+#-keep public class org.apache.** {
+ # <fields>;
+ # <methods>;
+#}
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}

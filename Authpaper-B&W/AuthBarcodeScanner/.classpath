@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/commons-math3-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/jsoup-1.7.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/core/core.jar" sourcepath="/core"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/mongo8thOct.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/markdown4j-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/scprov-jdk15on-1.47.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/workspace/externalLibs/Jama-1.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/solon li/Desktop/Android_Development/android-sdk-windows/platforms/android-23/optional/org.apache.http.legacy.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

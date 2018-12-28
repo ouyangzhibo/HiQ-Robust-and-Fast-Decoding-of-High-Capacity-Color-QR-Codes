@@ -1,0 +1,20 @@
+<!-- Copyright (C) 2014 Solon Li -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="6dip" 
+    android:background="@color/result_view">
+
+    <TextView
+        android:id="@+id/applist_firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:text="dummy"
+		android:gravity="center_vertical"
+		android:layout_marginBottom="10dip"
+        android:textSize="28sp" />
+
+</RelativeLayout> 

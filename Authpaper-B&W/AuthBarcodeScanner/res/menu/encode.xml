@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.cuhk.ie.authbarcodescanner.android.MainActivity" >
+    
+    <!-- <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/> -->
+    <item
+        android:id="@+id/action_encodeHistory"
+        android:orderInCategory="100"
+        android:title="@string/action_encodeHistory"
+        app:showAsAction="never"/> 
+    
+    <item
+        android:id="@+id/action_returnEncode"
+        android:orderInCategory="100"
+        android:title="@string/action_returnEncode"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_scanner"
+        android:orderInCategory="100"
+        android:title="@string/action_returnScanner"
+        app:showAsAction="never"/>
+	<!-- <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/action_about"
+        app:showAsAction="never"/> -->
+    <item
+        android:id="@+id/action_feedback"
+        android:orderInCategory="100"
+        android:title="@string/action_feedback"
+        app:showAsAction="never"/>
+</menu>

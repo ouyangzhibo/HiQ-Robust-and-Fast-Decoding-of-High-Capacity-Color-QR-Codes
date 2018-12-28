@@ -1,0 +1,159 @@
+<!-- Copyright (C) 2014 Solon Li -->
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/result_containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <edu.cuhk.ie.authbarcodescanner.android.AutoResizeTextView
+        android:id="@+id/result_issuerTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/result_issuerText_background"
+        android:ellipsize="none"
+        android:maxLines="3"
+        android:text="@string/msg_default_issuer_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/result_issuerText_notVerified"
+        android:textSize="100sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_above="@+id/result_buttonList"
+        android:layout_below="@+id/result_issuerTextView"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/result_containerView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/result_view"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/result_qrcode_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/button_codeimage"
+                android:scaleType="fitCenter"
+                android:src="@drawable/result_qrcode" 
+				android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/result_resultView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/result_view"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/result_content_text_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_preload_content_header"
+                    android:textColor="@color/result_issuerText_verified"
+                    android:textSize="24sp" />
+
+                <edu.cuhk.ie.authbarcodescanner.android.HelpWebView
+                    android:id="@+id/result_content_webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/result_content_image"
+                    android:layout_width="160dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginTop="4dip"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="160dip"
+                    android:maxWidth="160dip"
+                    android:scaleType="centerInside"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/result_content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:textColor="@color/result_text"
+                    android:textColorLink="@color/result_text"
+                    android:textSize="22sp" 
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/result_content_supplement_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_default_supplement_divider"
+                    android:textColor="@color/result_issuerText_verified"
+                    android:textSize="22sp" 
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/result_content_supplement_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:textColor="@color/result_text"
+                    android:textColorLink="@color/result_text"
+                    android:textSize="14sp" 
+                    android:visibility="gone" />
+            </LinearLayout>
+			<!-- <LinearLayout
+	            android:id="@+id/PillDrawerLayout"
+	            android:layout_weight="1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" >                
+                <ImageView
+                    android:id="@+id/PillPlaceholder"
+                    android:src="@drawable/result_qrcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter" />                
+	        </LinearLayout>   -->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout 
+        android:id="@+id/result_buttonList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_alignParentBottom="true"
+        android:background="@color/result_view"
+        android:orientation="horizontal" >
+
+         <Button
+             android:id="@+id/result_showQRcodeButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableTop="@drawable/result_qrcode"
+             android:background="@color/result_view"
+             android:maxHeight="160dip"
+             android:maxWidth="160dip"
+             android:text="@string/button_codeimage" 
+             style="?android:attr/borderlessButtonStyle"
+             android:textSize="22sp" />
+
+    </LinearLayout>
+</RelativeLayout>

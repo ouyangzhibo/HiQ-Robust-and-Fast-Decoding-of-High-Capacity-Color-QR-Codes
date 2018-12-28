@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2014 Solon Li 
+ -->
+ <!-- Message id handled by ScannerFragmentHandler -->
+<resources>
+  <!-- From the camManager and ScannerFragment-->
+  <item type="id" name="auto_focus"/>
+  <item type="id" name="resume_decode"/>
+  <item type="id" name="pause_decode"/>
+  <item type="id" name="init_decode"/>
+  <item type="id" name="start_decode"/>
+  <item type="id" name="save_image" />
+  <item type="id" name="scan_color" />
+  <!-- From the decode thread -->
+  <item type="id" name="decode_failed"/>
+  <item type="id" name="decode_detected"/>
+  <item type="id" name="decode_succeeded"/>
+  <!-- To the decode thread -->
+  <item type="id" name="decode"/>
+  <item type="id" name="decodeDeep"/>
+  <item type="id" name="end_decode"/>
+  <item name="decode_partial_succeeded" type="id"/>
+</resources>

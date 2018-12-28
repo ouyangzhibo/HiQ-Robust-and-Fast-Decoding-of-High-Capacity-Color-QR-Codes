@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2014 Solon Li  
+ -->
+ <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent" >
+
+  <PreferenceCategory android:title="@string/setting_decode"
+      android:textColor="@color/result_text">
+      <CheckBoxPreference
+        android:key="@string/pref_key_decode_1D"
+        android:defaultValue="false"
+        android:title="@string/setting_decode_1D"
+        android:textColor="@color/result_text"
+        android:summary="@string/setting_decode_1D_summary"/>
+      <CheckBoxPreference
+        android:key="@string/pref_key_decode_2D"
+        android:defaultValue="false"
+        android:title="@string/setting_decode_other2D"
+        android:textColor="@color/result_text"
+        android:summary="@string/setting_decode_other2D_summary"/>
+
+      <CheckBoxPreference
+        android:key="@string/pref_key_qr_code"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"
+        android:selectable="false"
+        android:enabled="false"
+        android:title="@string/setting_decode_QR" />
+      
+      <CheckBoxPreference
+        android:key="@string/pref_key_decode_Screen"
+        android:defaultValue="false"
+        android:title="@string/setting_decode_Screen"
+        android:textColor="@color/result_text"/>
+
+  </PreferenceCategory>
+  <!-- <PreferenceCategory android:title="@string/setting_encode">
+      <CheckBoxPreference
+        android:key="@string/pref_key_big_alignment"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"        
+        android:title="@string/setting_enlarged_alignment" 
+        android:textColor="@color/result_text"/>
+  </PreferenceCategory>-->
+  <PreferenceCategory android:title="@string/setting_camera">
+      <CheckBoxPreference
+        android:key="@string/pref_key_cam_invert"
+        android:defaultValue="false"
+        android:title="@string/setting_camera_invert"
+        android:textColor="@color/result_text"/>
+      <!-- <CheckBoxPreference
+        android:key="@string/pref_key_cam_scene"
+        android:defaultValue="false"
+        android:title="@string/setting_camera_barcodescene"
+        android:textColor="@color/result_text"/>
+      <CheckBoxPreference
+        android:key="@string/pref_key_cam_focus"
+        android:defaultValue="true"
+        android:selectable="false"
+        android:enabled="false"
+        android:title="@string/setting_camera_focus"/> -->
+  </PreferenceCategory>
+  <PreferenceCategory android:title="@string/setting_analytics">
+      <ListPreference
+          android:key="@string/pref_key_analytics"
+          android:title="@string/setting_analytics_title"
+          android:summary="@string/setting_analytics_summary"
+          android:dialogTitle="@string/setting_analytics_title"
+          android:entries="@array/pref_analytic_entries"
+          android:entryValues="@array/pref_analytic_value"
+          android:defaultValue="@string/setting_analytics_value_default"
+          android:textColor="@color/result_text"
+      />
+  </PreferenceCategory>
+</PreferenceScreen>    

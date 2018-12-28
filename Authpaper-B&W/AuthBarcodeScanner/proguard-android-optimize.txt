@@ -1,0 +1,105 @@
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+
+# Optimizations: If you don't want to optimize, use the
+# proguard-android.txt configuration file instead of this one, which
+# turns off the optimization flags.  Adding optimization introduces
+# certain risks, since for example not all optimizations performed by
+# ProGuard works on all versions of Dalvik.  The following flags turn
+# off various optimizations known to have issues, but the list may not
+# be complete or up to date. (The "arithmetic" optimization can be
+# used if you are only targeting Android 2.0 or later.)  Make sure you
+# test thoroughly if you go this route.
+-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*
+-optimizationpasses 5
+-allowaccessmodification
+#-dontoptimize
+-dontpreverify
+
+# The remainder of this file is identical to the non-optimized version
+# of the Proguard configuration file (except that the other file has
+# flags to turn off optimization).
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+-keepattributes *Annotation*
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+-keep class org.spongycastle.**
+
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+-dontwarn android.support.**
+
+
+-keep class org.apache.http.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn org.apache.commons.codec.binary.Base64
+-keep class org.apache.commons.codec.binary.Base64 { *; }
+-dontwarn org.apache.commons.codec.binary.Hex
+-keep class org.apache.commons.codec.binary.Hex { *; }
+-dontwarn java.awt.geom.AffineTransform
+-keep class java.awt.geom.AffineTransform { *; }
+-dontwarn java.lang.management.**
+-keep class java.lang.management.** { *; }
+-dontwarn javax.naming.**
+-keep class javax.naming.** { *; }
+-dontwarn com.mongodb.**
+-keep class android.net.http.SslCertificate { *; }
+-dontwarn android.net.http.SslCertificate
+-keep class android.net.http.SslError { *; }
+-dontwarn android.net.http.SslError
+-keep class android.net.http.SslError { *; }
+-keep class org.jsoup.nodes.Entities { *; }
+-keep class org.spongycastle.jce.provider.JDKKeyStore { *; }
+-keep class com.google.android.gms.auth.TokenData
+-keepnames class * implements android.os.Parcelable {
+	public static final ** CREATOR;
+}
+
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\commons-math3-3.2.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\jsoup-1.7.3.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\mongo8thOct.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\markdown4j-2.2.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\externalLibs\scprov-jdk15on-1.47.0.1.jar'
+-libraryjars 'C:\Users\solon li\Desktop\workspace\core\core.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\platforms\android-23\android.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\google\google_play_services\libproject\google-play-services_lib\bin\google-play-services_lib.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\android\support\v7\appcompat\bin\android-support-v7-appcompat.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\extras\android\support\v7\mediarouter\bin\android-support-v7-mediarouter.jar'
+-libraryjars 'C:\Users\solon li\Desktop\Android_Development\android-sdk-windows\platforms\android-23\optional\org.apache.http.legacy.jar'
+

@@ -1,0 +1,254 @@
+<!-- Copyright (C) 2015 Solon Li -->
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/result_containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/result_view"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:id="@+id/sample_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:text="@string/sample_title"
+        android:textColor="@color/result_text"
+        android:textSize="34sp" />
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/sample_title" >
+
+	    <TableLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:stretchColumns="1">
+ 			
+ 			<LinearLayout
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content" >
+	             <ImageView
+	                 android:id="@+id/samplesA"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:layout_weight="1"
+	                 android:adjustViewBounds="true"	                 
+	                 android:paddingLeft="5dp"
+	                 android:paddingRight="5dp"
+	                 android:src="@drawable/visitcard" />
+	             <ImageView
+		             android:id="@+id/samplesB"
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:adjustViewBounds="true"
+		             android:layout_weight="1"
+		             android:paddingLeft="5dp"
+	                 android:paddingRight="5dp"
+		             android:src="@drawable/namecard" />
+	             <!-- <ImageView
+		             android:id="@+id/samplesC"
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:adjustViewBounds="true"
+		             android:layout_weight="1"
+		             android:paddingLeft="5dp"
+	                 android:paddingRight="5dp"
+		             android:src="@drawable/invoice" />-->
+	             
+	         </LinearLayout>
+	        <TextView
+	            android:id="@+id/sample_explain"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/sample_explain"
+	            android:textColor="@color/result_text"
+	            android:textSize="16sp" />
+
+	        
+	  	    
+	  	     <LinearLayout		         
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:orientation="vertical" >	
+		         <TextView
+		             android:id="@+id/sample_visitcard_title"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             
+		             android:singleLine="true"
+		             android:text="@string/sample_visitCard_title"
+		             android:textColor="@color/result_text"
+		             android:textSize="20sp" />		         
+		         <TextView
+		             android:id="@+id/sample_visitcard_text"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             	             
+		             android:text="@string/sample_visitCard_text"
+		             android:textColor="@color/result_text"
+		             android:textSize="16sp" />		         
+
+		         <ImageView
+		             android:id="@+id/sample_visitcard_image"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:adjustViewBounds="true"
+		             android:src="@drawable/visitcard" />
+	         
+		         <Button 
+		            android:id="@+id/sample_visitcard_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/sample_click"
+					android:textSize="18sp"/>	         
+	     	</LinearLayout>
+	     	<!-- <LinearLayout		         
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:orientation="vertical" >	
+		         <TextView
+		             android:id="@+id/sample_namecard_title"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             
+		             android:singleLine="true"
+		             android:text="@string/sample_nameCard_title"
+		             android:textColor="@color/result_text"
+		             android:textSize="20sp" />		         
+		         <TextView
+		             android:id="@+id/sample_namecard_text"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             	             
+		             android:text="@string/sample_nameCard_text"
+		             android:textColor="@color/result_text"
+		             android:textSize="16sp" />		         
+		         <ImageView
+					android:id="@+id/sample_namecard_image"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:adjustViewBounds="true"
+					android:src="@drawable/namecard" />	         
+		         <Button 
+		            android:id="@+id/sample_namecard_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/sample_click"
+					android:textSize="18sp"/>	         
+	     	</LinearLayout> -->
+	     	<LinearLayout		         
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:orientation="vertical" >	
+		         <TextView
+		             android:id="@+id/sample_maxcontent_title"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             
+		             android:singleLine="true"
+		             android:text="@string/sample_maxcontent_title"
+		             android:textColor="@color/result_text"
+		             android:textSize="20sp" />		         
+		         <TextView
+		             android:id="@+id/sample_maxcontent_text"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             	             
+		             android:text="@string/sample_maxcontent_text"
+		             android:textColor="@color/result_text"
+		             android:textSize="16sp" />		         
+		         <ImageView
+					android:id="@+id/sample_maxcontent_image"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:adjustViewBounds="true"
+					android:src="@drawable/maxcontent" />	         
+		         <Button 
+		            android:id="@+id/sample_maxcontent_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/sample_click"
+					android:textSize="18sp"/>	         
+	     	</LinearLayout>
+	     	<LinearLayout		         
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:orientation="vertical" >	
+		         <TextView
+		             android:id="@+id/sample_certificate_title"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             
+		             android:singleLine="true"
+		             android:text="@string/sample_certificate_title"
+		             android:textColor="@color/result_text"
+		             android:textSize="20sp" />		         
+		         <TextView
+		             android:id="@+id/sample_certificate_text"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             	             
+		             android:text="@string/sample_certificate_text"
+		             android:textColor="@color/result_text"
+		             android:textSize="16sp" />		         
+		         <ImageView
+					android:id="@+id/sample_certificate_image"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:adjustViewBounds="true"
+					android:src="@drawable/certificate" />	         
+		         <Button 
+		            android:id="@+id/sample_certificate_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/sample_click"
+					android:textSize="18sp"/>	         
+	     	</LinearLayout>
+	     	<LinearLayout		         
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"
+		         android:orientation="vertical" >	
+		         <TextView
+		             android:id="@+id/sample_invoice_title"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             
+		             android:singleLine="true"
+		             android:text="@string/sample_invoice_title"
+		             android:textColor="@color/result_text"
+		             android:textSize="20sp" />		         
+		         <TextView
+		             android:id="@+id/sample_invoice_text"
+		             android:layout_width="fill_parent"
+		             android:layout_height="wrap_content"
+		             android:layout_weight="5"	             	             
+		             android:text="@string/sample_invoice_text"
+		             android:textColor="@color/result_text"
+		             android:textSize="16sp" />		         
+		         <ImageView
+					android:id="@+id/sample_invoice_image"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:adjustViewBounds="true"
+					android:src="@drawable/invoice" />	         
+		         <Button 
+		            android:id="@+id/sample_invoice_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/sample_click"
+					android:textSize="18sp"/>	         
+	     	</LinearLayout>
+       
+	    </TableLayout>
+	</ScrollView>
+</RelativeLayout>

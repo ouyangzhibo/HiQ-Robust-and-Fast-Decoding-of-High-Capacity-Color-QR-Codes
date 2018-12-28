@@ -1,0 +1,101 @@
+<!-- Copyright (C) 2014 Solon Li -->
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/encode_containerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+    
+    <TextView
+        android:id="@+id/encode_explainTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/result_issuerText_background"
+        android:text="@string/msg_encodeFragment_explain"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/result_issuerText_verified"
+        android:textSize="32sp" />
+    
+    <ScrollView 
+        android:id="@+id/encode_listView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_below="@id/encode_explainTextView">
+	    
+		<LinearLayout
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	      
+	        <TextView
+		        android:id="@+id/encode_shareAuthPaper"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/encode_shareAuthPaper"
+		        android:textColor="@color/result_text"
+		        android:drawableRight="@drawable/result_qrcode"
+		        android:gravity="center_vertical"
+		        android:layout_marginBottom="10dip"
+		        android:textSize="28sp" />
+	        
+	        <TextView
+		        android:id="@+id/encode_shareClipboardMessage"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/encode_shareClipboardMessage"
+		        android:textColor="@color/result_text"
+		        android:drawableRight="@drawable/result_copy"
+		        android:gravity="center_vertical"
+		        android:layout_marginBottom="10dip"
+		        android:textSize="28sp" />
+	        
+	        <TextView
+		        android:id="@+id/encode_shareContact"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/encode_shareContact"
+		        android:textColor="@color/result_text"
+		        android:drawableRight="@drawable/result_add_contact"
+		        android:gravity="center_vertical"
+		        android:layout_marginBottom="10dip"
+		        android:textSize="28sp" />
+	        
+			<TextView
+				android:id="@+id/encode_shareApplication"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/encode_shareApplication"
+				android:textColor="@color/result_text"
+				android:drawableRight="@drawable/result_play_store"
+				android:gravity="center_vertical"
+				android:layout_marginBottom="10dip"
+				android:textSize="28sp" />
+			
+			<TextView
+				android:id="@+id/encode_textField"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/encode_textField"
+				android:textColor="@color/result_text"
+				android:drawableRight="@drawable/result_text"
+				android:gravity="center_vertical"
+				android:layout_marginBottom="10dip"
+				android:textSize="28sp" />	
+
+			<CheckBox
+			    android:id="@+id/encode_signMsg"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="@string/encode_signMsg" />
+	    </LinearLayout>        
+    </ScrollView>
+</RelativeLayout>
+    
