@@ -27,6 +27,23 @@ If you are using this work, please cite the following papers:
   year={2016},
   organization={IEEE}
 }
+@inproceedings{Li2015authpaper,
+  title={AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes},
+  author={Li, Chak Man and Hu, Pili and Lau, Wing Cheong},
+  booktitle={IEEE International Conference on Communications},
+  pages={},
+  year={2015},
+  organization={IEEE}
+}
+Chak Man Li*, Pili Hu*, Wing Cheong Lau, “Demo: AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes,” in the Procs. of ACM MobiSys, June 2014.
+@inproceedings{Li2014MobiSys,
+  title={Demo: AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes},
+  author={Li, Chak Man and Hu, Pili and Lau, Wing Cheong},
+  booktitle={ACM MobiSys},
+  pages={},
+  year={2014},
+  organization={}
+}
 ```
 For the Authpaper project, this code base consists of our modified zxing core library, a Tomcat webapp for creating QR codes with or without digital signature, and an Android-based QR code scanner application which scans the Authenticated QR codes and color QR codes created from this project.
 
