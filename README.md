@@ -52,7 +52,7 @@ http://authpaper.net/colorDatabase/index.html
 
 Example HiQ Codes
 ---
-<img src="hiq-examples/2919bytes-L-v22.png" width="210"> <img src="hiq-examples/4498bytes-L-v27.png" width="210"> <img src="hiq-examples/6105bytes-L-v33.png" width="210"> <img src="hiq-examples/7704bytes-L-v38.png" width="210"> 
+<img src="HiQ/hiq-examples/2919bytes-L-v22.png" width="210"> <img src="HiQ/hiq-examples/4498bytes-L-v27.png" width="210"> <img src="HiQ/hiq-examples/6105bytes-L-v33.png" width="210"> <img src="HiQ/hiq-examples/7704bytes-L-v38.png" width="210"> 
 
 Current Work to Do
 ---
