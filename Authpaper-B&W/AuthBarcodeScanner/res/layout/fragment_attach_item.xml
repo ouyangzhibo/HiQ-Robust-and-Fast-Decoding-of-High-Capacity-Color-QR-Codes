@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="?android:attr/activatedBackgroundIndicator">
+    <ImageView
+        android:id="@+id/att_preview"
+        android:contentDescription="@string/fb_att_image_preview"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher" />
+    <TextView
+        android:id="@+id/att_filename"
+        android:layout_weight="5"
+        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:paddingLeft="5dp"
+        android:text="@string/fb_attach"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+</LinearLayout>

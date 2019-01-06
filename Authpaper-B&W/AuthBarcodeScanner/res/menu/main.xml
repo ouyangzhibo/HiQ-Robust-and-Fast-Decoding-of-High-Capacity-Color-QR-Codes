@@ -1,0 +1,55 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.cuhk.ie.authbarcodescanner.android.MainActivity" >
+
+   <!-- <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    
+     <item
+        android:id="@+id/action_encode"
+        android:orderInCategory="100"
+        android:title="@string/action_encode"
+        app:showAsAction="never"/>
+    -->
+    <item
+        android:id="@+id/action_samples"
+        android:orderInCategory="100"
+        android:title="@string/action_samples"
+        app:showAsAction="never"/> 
+    <item
+        android:id="@+id/action_history"
+        android:orderInCategory="100"
+        android:title="@string/action_history"
+        app:showAsAction="never"/> 
+    
+    <item
+        android:id="@+id/action_certificate"
+        android:orderInCategory="100"
+        android:title="@string/action_certificate"
+        app:showAsAction="never"/>    
+    
+    <item
+		android:id="@+id/action_returnScanner"
+        android:orderInCategory="100"
+        android:title="@string/action_returnScanner"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_feedback"
+        android:orderInCategory="100"
+        android:title="@string/action_feedback"
+        app:showAsAction="never"/> 
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/action_about"
+        app:showAsAction="never"/>      
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout"
+        app:showAsAction="never"/>
+</menu>

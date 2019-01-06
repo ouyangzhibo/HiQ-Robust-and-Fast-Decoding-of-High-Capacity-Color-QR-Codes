@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2014 Solon Li 
+ -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+  tools:ignore="MissingTranslation">
+  
+    <!-- Generic strings -->
+    <string name="gen_refresh">Refresh</string>
+    <string name="gen_save">Save</string>
+    <string name="gen_cancel">Cancel</string>
+    <string name="gen_done">Done</string>
+    <string name="gen_continue">Continue</string>
+    <string name="gen_remove">Remove</string>
+    <string name="gen_warning">Remove</string>
+    <string name="gen_upload">Upload</string>
+    <string name="gen_error_res_online">Please add an offline resource. Download it first then try again</string>
+    
+    <!-- Login strings -->
+    <string name="login_info">Setting up the App. If this is the first time you open this App, please login your Google+ account to use this service.</string>
+    <string name="login_info_free">Checking if this is installed via Google Play and setting up the trusted certificate storage to verify scanned 2D barcodes.</string>
+    <string name="not_online">Please connect to the internet to log in</string>
+    <string name="pick_account">Please log in with an account to continue</string>
+    <string name="login_gps_warning">App not downloaded from Google Play!</string>
+    <string name="login_gps_text">This app was not downloaded from Google Play and may be out of date. Please download the official version for the latest decoding algorithms and security enhancements.\nhttp://www.authpaper.net</string>
+
+    <string name="app_name">AuthPaper QR Code Scanner</string>
+    <string name="app_name_deluxe">AuthPaper Scanner Deluxe</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Option menu items -->
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_encode">Create 2D barcode</string>
+    <string name="action_history">Scan history</string>
+	<string name="action_updateCert">Update Certificates</string>
+    <string name="action_certificate">Manage Certificates</string>
+    <string name="action_feedback">Feedback</string>
+    <string name="action_logout">Change Account</string>    
+    <string name="action_returnScanner">Return to scanner</string>
+    <string name="action_encodeHistory">Creation history</string>
+    <string name="action_returnEncode">Return to create 2D barcode</string>
+    <string name="action_changeRecordTitle">Change record title</string>
+    
+    <string name="about_title">AuthPaper Scanner (version 2.1) by MobiTeC</string>
+    <string name="about_text">This scanner is created by MobiTeC, CUHK to decode AuthPapers as well as normal 2D barcodes.\nPlease visit <a href="http://www.authpaper.net">http://www.authpaper.net</a> for details. \n\nWe will collect scanning statistics anonymously on each successful scanning (e.g. scanning time, code size) for usage statistics and analysis only. No code content will be uploaded. You can always disable the data collection in the setting.</string>
+    <string name="about_text_deluxe">This scanner is created by MobiTeC, CUHK to decode AuthPapers as well as normal 2D barcodes.\nPlease visit <a href="http://www.authpaper.net">http://www.authpaper.net</a> for details. \n\nThis deluxe version allows you to scan QR codes in local images, add personal certificates to the certificate store, and automatically upload your scanning / creation record to authpaper.net for checking.\n\nWe will collect scanning statistics anonymously on each successful scanning (e.g. scanning time, code size) for usage statistics and analysis only. No code content will be uploaded. You can always disable the data collection in the setting.</string>
+    <string name="msg_default_feedback">Finding 2D barcodes, adjust the phone for correct focus.</string>
+    <string name="msg_detected_feedback_header"> detected. Keep the code in sight with rotations/back-and-forth movements.</string>
+    <string name="msg_default_issuer_text">Unknown Issuer</string>
+    <string name="msg_verified_issuer_header">Signed by : </string>
+    <string name="msg_verified_sender_header">From : </string>
+    <string name="msg_notverified_sender_header">Unverified message\n</string>
+    <string name="msg_preload_content_header">Loading</string>
+    <string name="msg_default_content_header">Content Type : </string>
+    <string name="msg_default_supplement_divider">Encrypted content: </string>
+    <string name="msg_historyFragment_explain">Click to view details.\nLong click to delete.</string>
+    <string name="msg_encodeFragment_explain">2D barcode creator</string>
+    <string name="button_copyText">Copy text</string>
+    <string name="button_webSearch">Search text on Web</string>
+    <string name="button_shareText">Share text</string>
+    <string name="button_addContact">Add Contact</string>
+    <string name="button_send">Send</string>
+    <string name="button_dial">Dial</string>
+    <string name="button_visitPage">Visit the URL</string>
+    <string name="button_saveFile">Save the file</string>
+    <string name="button_readSecret">Show Secret</string>
+    <string name="button_codeimage">See barcode</string>
+    <string name="button_codeimage_alter">See result</string>
+
+    <!-- user settings -->
+    <string name="pref_key_decode_Screen">IS_DECODE_SCREEN</string>
+    <string name="setting_decode_Screen">Decoding code on screen</string>
+    <string name="pref_key_decode_1D">DECODE_1D_BARCODE</string>
+    <string name="setting_decode">Decode Settings</string>
+    <string name="setting_decode_1D">1D barcodes</string>
+    <string name="setting_decode_1D_summary">Decode 1D barcodes like UPC. Enabling this will substantially increase the scanning time.</string>
+    <string name="pref_key_decode_2D">DECODE_FURTHER_2D_BARCODE</string>    
+    <string name="setting_decode_other2D">Other 2D barcodes</string>
+    <string name="setting_decode_other2D_summary">Except QR code, also decode other kinds of 2D barcodes (DATA MATRIX, AZTEC and PDF417)</string>
+    <string name="pref_key_qr_code">DECODE_QRCODE</string>
+    <string name="setting_decode_QR">QR codes</string>
+    <string name="setting_encode">Encode Settings</string>
+    <string name="pref_key_big_alignment">ENLARGED_ALIGNMENT</string>
+    <string name="setting_enlarged_alignment">Use our special QR codes</string>
+    <string name="setting_camera">Camera Settings</string>
+    <string name="pref_key_cam_focus">KEY_AUTO_FOCUS</string>
+    <string name="setting_camera_focus">Auto focus</string>
+    <string name="pref_key_cam_invert">KEY_INVERT_SCAN</string>
+    <string name="setting_camera_invert">Invert color (if supported)</string>
+    <string name="pref_key_cam_scene">KEY_BARCODE_SCENE_MODE</string>
+    <string name="setting_camera_barcodescene">Barcode scene mode (if supported)</string>
+    
+    
+    <string name="setting_analytics">Analytic Settings</string>
+    <string name="pref_key_analytics">KEY_ANALYTICS</string>
+    <string name="setting_analytics_title">Select type of usage data to upload</string>
+    <string name="setting_analytics_summary">Currently using: </string>
+    <string name="setting_analytics_value_none">None</string>
+    <string name="setting_analytics_value_default">Default</string>
+    <string name="setting_analytics_value_extra">Extra</string>
+    <string name="setting_analytics_entry_none">None - No usage data</string>
+    <string name="setting_analytics_entry_default">Default - Basic scan details</string>
+    <string name="setting_analytics_entry_extra">Extra - Scan details and scanned image</string>
+    
+    <string name="encode_textField">Manual input your message</string>
+    <string name="encode_textField_button">Create QR code</string>
+    <string name="encode_shareApplication">Google Play link of an application</string>
+    <string name="encode_shareContact">Encode contact</string>
+    <string name="encode_shareClipboardMessage">Encode clipboard message</string>
+	<string name="encode_shareAuthPaper">Create signed documents or 2D barcodes</string>
+    <string name="encode_shareAuthPaperPaid">Create signed documents</string>
+    <string name="encode_signMsg">Digitally sign the message</string>
+    
+    <!--  shared preferences -->
+    <string name="pref_login_email">LOGIN_EMAIL</string>
+	<string name="pref_google_plus_token">GOOGLE_PLUS_TOKEN</string>
+    <string name="pref_loading_token">LOADING_TOKEN</string>
+    
+    <!-- History -->
+    <string name="title_delete">Select items to delete</string>
+    <string name="title_item_selected">Selected: </string>
+    <string name="menu_edit">Edit Title</string>
+    <string name="confirm_history_upload">Confirm upload history to authpaper.net using your Google+ account? \nRecords on the website will be overwritten. \nThis may take a lot of data. Do this only when connected to WiFi or unlimited data plan</string>
+    <string name="history_visit">Visit online record</string>
+    <!-- History Edit Title -->
+    <string name="edit_dialog_title">Edit Title</string>
+    <string name="edit_dialog_error">There was an error saving your changes</string>
+    <string name="edit_dialog_saved">Title has been updated</string>
+    <!-- Feedback -->
+    <string name="fb_ab_title">Feedback</string>
+    <string name="fb_menu_send">Send</string>
+    <string name="fb_menu_sending">Sending...</string>
+    <string name="fb_attach">Add attachment</string>
+    <string name="fb_reset">Reset form</string>
+    <string name="fb_title">Your feedback helps us improve</string>
+    <string name="fb_good">I Like it</string>
+    <string name="fb_bad">I Dislike it</string>
+    <string name="fb_info">Other</string>
+    <string name="fb_cb_anon">Send anonymously</string>
+    <string name="fb_email">Include a reply address</string>
+    <string name="fb_cb_stat">Send hardware information for analysis</string>
+    <string name="fb_content">Please enter your feedback below</string>
+    <string name="fb_empty">Please enter your comment before submitting</string>
+    <string name="fb_sending">Please wait, your feedback is being sent</string>
+    <string name="fb_sent_good">Your feedback has been successfully submitted. Thank you</string>
+    <string name="fb_sent_bad">There was a problem sending your feedback. Please try again later</string>
+	<!-- Feedback attachments -->
+	<string name="fb_attach_none">No Attachments</string>
+	<string name="fb_att_image_preview">Image Preview</string>
+	
+	<!-- Certificate activity -->
+	<string name="cert_title">Certificates</string>
+	<string name="cert_add">Add Certificate</string>
+	<string name="cert_none">No Certificates</string>
+	<!-- Certificate adding -->
+	<string name="cert_toast_denied">Denied - Cannot replace system certificates</string>
+	<string name="cert_toast_failed">Failed to add certificate. Ensure that it has not already been added.</string>
+	<!-- <string name="cert_warning_dialog">A certificate issued to this entity already exists. Are you sure you want to replace it? This action cannot be undone.</string> -->
+	<string name="cert_warning_dialog">Duplicate certificate found. Replace it by the new certificate? This cannot be undone.</string>
+	<!-- Certificate item in listview -->
+	<string name="cert_no_title">No title</string>
+	<string name="cert_label_date_expire">Expires:</string>
+	<string name="cert_label_date_issued">Issued:</string>
+	<string name="cert_date_default">No Date</string>
+	<!--  Certificate detail view -->
+	<string name="cert_detail">Certificate Details</string>
+	<string name="lb_issued_to">Issued to:</string>
+	<string name="lb_issued_by">Issued by:</string>
+	<string name="lb_pubkey">Public Key</string>	
+	
+	<!-- Sample fragment -->
+	<string name="action_samples">Examples</string>
+	<string name="sample_title">Samples of AuthPaper</string>
+	<string name="sample_explain">AuthPaper provides a cost-effective, secure solution for authenticating paper-based documents/credentials by extending 2D barcodes to carry a digitally-signed document copy. \nHere are some examples of document protected by AuthPaper. \n</string>
+	<string name="sample_click">Read the document.</string>
+	<string name="sample_visitCard_title">Photo Name Badge</string>
+	<string name="sample_visitCard_text">Besides images and text, the color 2D barcode can also save encrypted contact (password is 1234).</string>
+	<string name="sample_nameCard_title">Name Card</string>
+	<string name="sample_nameCard_text">The color code also support storing a lot of data in a small printout size (>300 bytes per cm square).</string>
+	<string name="sample_certificate_title">Certificate</string>
+	<string name="sample_certificate_text">Documents can also be stored in special deigned QR codes so that it can be scanned by normal scanners.</string>
+	<string name="sample_invoice_title">Invoice</string>
+	<string name="sample_invoice_text">AuthPaper supports all kinds of documents and hence enable SME businesses and individuals to create low-cost yet non-forgeable self-authenticating paper-based documents/credentials which can be verified without online network-access or real-time communication with the document issuer.</string>
+	<string name="sample_maxcontent_title">University Information</string>
+	<string name="sample_maxcontent_text">The color 2D barcode can support at most 8856 bytes in 5.6 * 5.6 cm^2 area.</string>
+</resources>

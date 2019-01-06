@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2014 Solon Li 
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.cuhk.ie.authbarcodescanner.android"
+    android:versionCode="24"
+    android:versionName="2.1" >
+    
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> 
+    <permission android:name="edu.cuhk.ie.authbarcodescanner.android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="edu.cuhk.ie.authbarcodescanner.android.permission.C2D_MESSAGE" />
+     -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.touchscreen"/> <!-- To exclude Google TV -->
+  	<uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+  	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+  	<uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity 
+            android:name="edu.cuhk.ie.authbarcodescanner.android.LoginActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name="edu.cuhk.ie.authbarcodescanner.android.MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="edu.cuhk.ie.authbarcodescanner.android.FeedbackActivity"
+            android:label="@string/fb_ab_title" 
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="edu.cuhk.ie.authbarcodescanner.certificate.CertificateActivity"
+            android:label="@string/cert_title" 
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="edu.cuhk.ie.authbarcodescanner.certificate.CertificateDetailActivity"
+            android:label="@string/cert_detail" 
+            android:screenOrientation="portrait" >
+        </activity>        
+        <activity android:name="edu.cuhk.ie.authbarcodescanner.android.SettingFragment"
+            android:label="@string/action_settings"
+        	android:screenOrientation="portrait">
+            <intent-filter>
+            	<action android:name=".SettingFragment" />
+            	<category android:name="android.intent.category.PREFERENCE" />
+        	</intent-filter>
+		</activity>
+		<activity android:name="edu.cuhk.ie.authbarcodescanner.android.EncodeActivity"
+              android:label="@string/app_name"
+              android:stateNotNeeded="true">
+      		<intent-filter>
+        		<action android:name="com.google.zxing.client.android.ENCODE"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+      		</intent-filter>
+      		<!-- This allows us to handle the Share button in Contacts. -->
+      		<intent-filter>
+        		<action android:name="android.intent.action.SEND"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+        		<data android:mimeType="text/x-vcard"/>
+      		</intent-filter>
+      		<!-- This allows us to handle sharing any plain text . -->
+      		<intent-filter>
+        		<action android:name="android.intent.action.SEND"/>
+        		<category android:name="android.intent.category.DEFAULT"/>
+        		<data android:mimeType="text/plain"/>
+      		</intent-filter>
+    	</activity>
+        <!-- <receiver
+            android:name="edu.cuhk.ie.authbarcodescanner.android.news.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="edu.cuhk.ie.authbarcodescanner.android" />
+            </intent-filter>
+        </receiver>-->
+        <!--<service android:name="edu.cuhk.ie.authbarcodescanner.android.news.GCMIntentService" />-->    
+		<service android:name="edu.cuhk.ie.authbarcodescanner.android.SendService" android:exported="false"></service>
+		<!--<service android:name="edu.cuhk.ie.authbarcodescanner.android.news.EventService"></service>
+		<service android:name="edu.cuhk.ie.authbarcodescanner.android.news.NewsService"></service>-->
+		<service android:name="edu.cuhk.ie.authbarcodescanner.android.UpdateDigitalCertService"></service>
+    	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    </application>
+</manifest>

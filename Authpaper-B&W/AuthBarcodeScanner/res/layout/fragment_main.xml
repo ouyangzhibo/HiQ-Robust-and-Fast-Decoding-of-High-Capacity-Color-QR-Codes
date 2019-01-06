@@ -1,0 +1,125 @@
+<!--
+ Copyright (C) 2014 Solon Li 
+ -->
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_frame"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.cuhk.ie.authbarcodescanner.android.MainActivity$PlaceholderFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SurfaceView android:id="@+id/view_camera"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:layout_centerInParent="true"/>
+    
+<edu.cuhk.ie.authbarcodescanner.android.camera.CameraOverlay   
+        android:id="@+id/view_cameraoverlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@drawable/nocamimg"
+        android:layout_centerInParent="true">
+        </edu.cuhk.ie.authbarcodescanner.android.camera.CameraOverlay>
+      
+        <!--
+    <LinearLayout android:id="@+id/view_shortcutbutton"
+                android:orientation="vertical"
+    			android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_gravity="bottom|center_horizontal"
+                android:baselineAligned="false">
+	</LinearLayout>
+        -->
+
+        <TextView
+            android:id="@+id/view_feedbackmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:alpha="160"
+            android:background="@color/result_issuerText_background"
+            android:text="@string/msg_default_feedback"
+            android:textColor="@color/result_issuerText_verified"
+            android:textSize="24sp" 
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/view_buttonList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:background="@color/view_buttonBackground"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/view_openTorch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_torch" />
+            <Button
+                android:id="@+id/view_localFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_file" />
+            <Button
+                android:id="@+id/view_createQRcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_createqrcode" />
+            <Button
+                android:id="@+id/view_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_setting" />
+            <!--<Button
+                android:id="@+id/view_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_help" />-->
+           <Button
+                android:id="@+id/view_scanqrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxHeight="80dip"
+                android:maxWidth="80dip"
+                android:layout_gravity="center_vertical"
+                android:background="@color/view_buttonBackground"
+                android:drawableTop="@drawable/view_scanbothqrcode" />
+        </LinearLayout>
+
+</RelativeLayout>

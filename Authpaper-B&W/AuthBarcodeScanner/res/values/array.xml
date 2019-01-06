@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_analytic_value">
+        <item>@string/setting_analytics_value_none</item>
+        <item>@string/setting_analytics_value_default</item>
+       <item>@string/setting_analytics_value_extra</item>
+    </string-array>
+    <string-array name="pref_analytic_entries">
+        <item>@string/setting_analytics_entry_none</item>
+        <item>@string/setting_analytics_entry_default</item>
+       <item>@string/setting_analytics_entry_extra</item>
+    </string-array>    
+    
+</resources>

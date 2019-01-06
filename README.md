@@ -1,7 +1,11 @@
-# HiQ: High Capacity Color QR Codes
-Implementation of HiQ codes, including source code for a desktop HiQ codes generator and the core of HiQ codes decoder for Android platform written in Java. This repository also includes two algorithms for solving the cross-module color interference written in Matlab. 
+# AuthPaper and HiQ: High Capacity Color QR Codes
+This is the official github for the research project AuthPaper: Protecting Paper-based Documents / Credentials Using Authenticated 2D Barcodes and HiQ: Robust and Fast Decoding of High-Capacity QR Codes
 
-This work is developed upon [ZXing](https://github.com/zxing/zxing).
+More project details can be found here : http://authpaper.net .
+
+Both works are developed upon [ZXing](https://github.com/zxing/zxing).
+
+The source code of this project has been used in https://authpaper.com, a company providing document anti-forgery solutions.
 
 If you are using this work, please cite the following papers:
 ```bibtex
@@ -23,13 +27,33 @@ If you are using this work, please cite the following papers:
   year={2016},
   organization={IEEE}
 }
+@inproceedings{Li2015authpaper,
+  title={AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes},
+  author={Li, Chak Man and Hu, Pili and Lau, Wing Cheong},
+  booktitle={IEEE International Conference on Communications},
+  pages={},
+  year={2015},
+  organization={IEEE}
+}
+@inproceedings{Li2014MobiSys,
+  title={Demo: AuthPaper - Protecting Paper-based Documents/ Credentials using Authenticated 2D Barcodes},
+  author={Li, Chak Man and Hu, Pili and Lau, Wing Cheong},
+  booktitle={ACM MobiSys},
+  pages={},
+  year={2014},
+  organization={}
+}
 ```
+For the Authpaper project, this code base consists of our modified zxing core library, a Tomcat webapp for creating QR codes with or without digital signature, and an Android-based QR code scanner application which scans the Authenticated QR codes and color QR codes created from this project.
+
+For the HiQ project, the code base consists of a desktop-based generator, decoder, MatLab code on training the color classifer and some HiQ examples.
+Users may use the mobile application to scan the HiQ, with proper color classifier.
 
 Prerequisites
 ---
 
-- libsvm (for matlab code)
-- ZXing (for desktop HiQ codes creator and decoder)
+- libsvm (for matlab code in HiQ project)
+- ZXing (for other modules)
 
 Code Contributors
 ---
@@ -44,6 +68,11 @@ http://authpaper.net/colorDatabase/index.html
 
 Example HiQ Codes
 ---
-<img src="hiq-examples/2919bytes-L-v22.png" width="210"> <img src="hiq-examples/4498bytes-L-v27.png" width="210"> <img src="hiq-examples/6105bytes-L-v33.png" width="210"> <img src="hiq-examples/7704bytes-L-v38.png" width="210"> 
+<img src="HiQ/hiq-examples/2919bytes-L-v22.png" width="210"> <img src="HiQ/hiq-examples/4498bytes-L-v27.png" width="210"> <img src="HiQ/hiq-examples/6105bytes-L-v33.png" width="210"> <img src="HiQ/hiq-examples/7704bytes-L-v38.png" width="210"> 
+
+Current Work to Do
+---
+Integrate both projects into one
+Provide enough helping documents
 
 **More details to come...** 

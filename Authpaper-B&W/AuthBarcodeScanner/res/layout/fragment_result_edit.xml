@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <FrameLayout 
+        android:id="@+id/btnBarFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include android:id="@+id/btnBar"
+            layout="@layout/btnbar_save" />        
+    </FrameLayout>
+    <include android:id="@+id/resultData"
+        layout="@layout/fragment_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@id/titleEdit"
+        android:layout_above="@id/btnBarFrame"/>
+</RelativeLayout>
