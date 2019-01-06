@@ -59,6 +59,7 @@ Code Contributors
 ---
 - Chak Man Li
 - Zhibo Yang
+- Guanchen Li
 
 Color QR code Dataset: CUHK-CQRC
 ---
