@@ -63,11 +63,9 @@ Code Contributors
 
 Color QR code Dataset: CUHK-CQRC
 ---
-A dataset containing more than 5k color QR codes images captured by a variety of smartphones under different lighting conditions.
+A dataset containing more than 5k color QR codes images captured by a variety of smartphones under different lighting conditions ([Download](http://www.authpaper.net/colorDatabase/cuhk-cqrc/)).
 
 http://authpaper.net/colorDatabase/index.html
-
-[Download](http://www.authpaper.net/colorDatabase/cuhk-cqrc/.)
 
 Example HiQ Codes
 ---
